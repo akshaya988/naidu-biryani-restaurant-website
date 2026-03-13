@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Naidu Gari Kunda Biryani | The Royal Taste of Bhimavaram</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script>
+tailwind.config = {
+theme:{
+extend:{
+colors:{
+royal:{900:'#1a0b0b'},
+gold:{400:'#d4af37'}
+},
+fontFamily:{
+serif:['Playfair Display','serif'],
+sans:['Lato','sans-serif']
+}
+}
+}
+}
+</script>
+
+<style>
+
+.hero-bg{
+background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+animation:heroFade 2s ease forwards;
+}
+
+@keyframes heroFade{
+0%{filter:brightness(0.3);}
+100%{filter:brightness(1);}
+}
+
+.hero-text{
+opacity:0;
+transform:translateY(60px);
+animation:heroText 1.5s ease forwards;
+animation-delay:1s;
+}
+
+@keyframes heroText{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.menu-card img{
+transition:transform .6s ease;
+}
+
+.menu-card:hover img{
+transform:scale(1.1);
+}
+
+.menu-card{
+transition:all .4s ease;
+}
+
+.menu-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,.25),
+0 0 15px rgba(212,175,55,.5);
+}
+
+.btn-gold{
+background:#d4af37;
+color:#1a0b0b;
+transition:.4s;
+}
+
+.btn-gold:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+</style>
+
+</head>
+
+<body class="font-sans bg-stone-50">
+
+<div id="progress" class="fixed top-0 left-0 h-1 bg-gold-400 z-50"></div>
+
+<div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
+<h1 class="text-gold-400 font-serif text-3xl animate-pulse">
+Naidu Gari Kunda Biryani
+</h1>
+</div>
+
+<nav class="fixed w-full z-40 bg-black/40 backdrop-blur-xl border-b border-white/10">
+
+<div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+
+<h1 class="font-serif text-2xl text-gold-400">
+Naidu Gari <span class="text-white">Kunda</span>
+</h1>
+
+<div class="hidden md:flex gap-8 text-gray-300">
+<a href="#home" class="hover:text-gold-400">Home</a>
+<a href="#about" class="hover:text-gold-400">About</a>
+<a href="#menu" class="hover:text-gold-400">Menu</a>
+<a href="#contact" class="hover:text-gold-400">Contact</a>
+</div>
+
+</div>
+</nav>
+
+<section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+
+<div class="hero-text">
+
+<h1 class="font-serif text-6xl mb-6">
+Naidu Gari <span class="text-gold-400 italic">Kunda Biryani</span>
+</h1>
+
+<p class="max-w-xl mx-auto mb-10">
+Authentic clay pot biryani cooked with rich Andhra spices and premium basmati rice.
+</p>
+
+<a href="#menu" class="btn-gold px-8 py-4 font-bold uppercase">
+View Menu
+</a>
+
+</div>
+
+</section>
+
+<section id="about" class="py-24 bg-white">
+
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 px-6 items-center">
+
+<img data-aos="fade-right"
+src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1974&auto=format&fit=crop"
+class="rounded-lg shadow-xl">
+
+<div data-aos="fade-left">
+
+<h2 class="font-serif text-4xl mb-6">
+Authentic Kunda Biryani
+</h2>
+
+<p class="text-gray-600 mb-6">
+Naidu Gari Kunda Biryani is famous in Bhimavaram for traditional dum cooking in clay pots.
+</p>
+
+<ul class="space-y-4">
+
+<li class="flex items-center">
+<i data-lucide="check-circle" class="text-gold-400 mr-3"></i>
+Premium basmati rice
+</li>
+
+<li class="flex items-center">
+<i data-lucide="check-circle" class="text-gold-400 mr-3"></i>
+Traditional clay pot cooking
+</li>
+
+<li class="flex items-center">
+<i data-lucide="check-circle" class="text-gold-400 mr-3"></i>
+Authentic Andhra spices
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="menu" class="py-24 bg-stone-100">
+
+<h2 class="text-center font-serif text-4xl mb-16">
+Signature Dishes
+</h2>
+
+<div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+
+<div data-aos="zoom-in" class="menu-card bg-white rounded-lg overflow-hidden">
+<img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=2070&auto=format&fit=crop">
+<div class="p-8 text-center">
+<h3 class="font-serif text-2xl">Chicken Dum Biryani</h3>
+<p class="text-gray-500 mb-4">Slow cooked chicken biryani in clay pot.</p>
+<div class="text-gold-400 text-xl font-bold">₹220</div>
+</div>
+</div>
+
+<div data-aos="zoom-in" class="menu-card bg-white rounded-lg overflow-hidden">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuBJDerqy4xVpDwQg44oRK0---IoVj-sWUTw&s" class="w-full h-64 object-cover">
+<div class="p-8 text-center">
+<h3 class="font-serif text-2xl">Dilkush Biryani</h3>
+<p class="text-gray-500 mb-4">Special rich masala biryani loved by customers.</p>
+<div class="text-gold-400 text-xl font-bold">₹260</div>
+</div>
+</div>
+
+<div data-aos="zoom-in" class="menu-card bg-white rounded-lg overflow-hidden">
+<img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop">
+<div class="p-8 text-center">
+<h3 class="font-serif text-2xl">Paneer Pot Biryani</h3>
+<p class="text-gray-500 mb-4">Vegetarian paneer clay pot biryani.</p>
+<div class="text-gold-400 text-xl font-bold">₹200</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="py-24 bg-white">
+
+<h2 class="text-center font-serif text-4xl mb-16">
+Food Gallery
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+
+<img data-aos="zoom-in"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT53uyypKXRUpX_wrT4a3RUgLzQviAErib2Iw&s"
+class="w-full h-72 object-cover rounded-lg shadow-lg">
+
+<img data-aos="zoom-in"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKC68lN7QqYLF3Po8AMDePZ9FWxO3fFqAwNw&s"
+class="w-full h-72 object-cover rounded-lg shadow-lg">
+
+<img data-aos="zoom-in"
+src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5GLmKVCcQd3jIDlK2irESntV5gCeM56FAAA&s"
+class="w-full h-72 object-cover rounded-lg shadow-lg">
+
+</div>
+
+</section>
+
+<section class="py-24 bg-white">
+
+<h2 class="text-center font-serif text-4xl mb-16">
+Customer Reviews
+</h2>
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 px-6">
+
+<div data-aos="fade-up" class="bg-stone-100 p-8 rounded-lg shadow">
+<p class="text-gray-600 mb-6">
+"One of the best biryanis in Bhimavaram. The clay pot flavor is amazing."
+</p>
+<h4 class="font-bold">Ravi Kumar</h4>
+<p class="text-gold-400">★★★★★</p>
+</div>
+
+<div data-aos="fade-up" class="bg-stone-100 p-8 rounded-lg shadow">
+<p class="text-gray-600 mb-6">
+"The Dilkush Biryani is my favorite. Rich masala and perfect rice."
+</p>
+<h4 class="font-bold">Sneha Reddy</h4>
+<p class="text-gold-400">★★★★★</p>
+</div>
+
+<div data-aos="fade-up" class="bg-stone-100 p-8 rounded-lg shadow">
+<p class="text-gray-600 mb-6">
+"Authentic Andhra taste. Must visit when you are in Bhimavaram."
+</p>
+<h4 class="font-bold">Suresh Naidu</h4>
+<p class="text-gold-400">★★★★★</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT --> <section id="contact" class="py-24 bg-stone-100"> <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 px-6"> <div> <h2 class="font-serif text-4xl mb-8"> Visit Our Restaurant </h2> <div class="space-y-6 text-gray-700"> <div class="flex items-start gap-4"> <i data-lucide="map-pin" class="text-gold-400"></i> <p>Nagaraju Mall, Juvvalapalem Rd, Bhimavaram</p> </div>
+<div class="flex items-center gap-4"> <i data-lucide="phone" class="text-gold-400"></i> <p>+91 99772 24757</p> </div> <div class="flex items-center gap-4"> <i data-lucide="clock" class="text-gold-400"></i> <p>Open Daily : 11AM - 11PM</p> </div> </div> </div> <div class="bg-white p-10 rounded-lg shadow-xl"> <h3 class="font-serif text-2xl mb-6"> Send a Message </h3> <form class="space-y-4"> <input type="text" placeholder="Your Name" class="w-full border p-3 rounded"> <input type="email" placeholder="Email Address" class="w-full border p-3 rounded"> <textarea placeholder="Message" class="w-full border p-3 rounded h-32"></textarea> <button class="btn-gold w-full py-3 font-bold"> Send Message </button>
+</form> </div> </div> </section> <!-- MAP --> <section class="h-[400px]"> <iframe src="https://maps.google.com/maps?q=bhimavaram&t=&z=13&ie=UTF8&iwloc=&output=embed" class="w-full h-full border-0"> </iframe> </section> <!-- FOOTER --> <footer class="bg-black text-gray-300 py-12"> <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10"> <div> <h3 class="font-serif text-2xl text-gold-400 mb-4"> Naidu Gari Kunda Biryani </h3> <p>Authentic clay pot biryani in Bhimavaram.</p> </div> <div> <h4 class="font-bold mb-4">Quick Links</h4> <ul class="space-y-2"> <li><a href="#home">Home</a></li> <li><a href="#menu">Menu</a></li> <li><a href="#contact">Contact</a></li> </ul> </div> <div> <h4 class="font-bold mb-4">Follow Us</h4> <div class="flex gap-4"> <i data-lucide="instagram"></i> <i data-lucide="facebook"></i> <i data-lucide="twitter"></i> </div> </div> </div> <p class="text-center text-gray-500 mt-10"> © 2026 Naidu Gari Kunda Biryani </p> </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({duration:1200,once:true});
+lucide.createIcons();
+
+window.addEventListener("load",()=>{
+document.getElementById("loader").style.display="none";
+});
+
+window.onscroll=function(){
+let scrollTop=document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(scrollTop/height)*100;
+document.getElementById("progress").style.width=scrolled+"%";
+};
+
+</script>
+
+</body>
+</html>
